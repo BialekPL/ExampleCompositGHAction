@@ -12,13 +12,13 @@ outputs:
 runs:
   using: "composite"
   steps:
-    - run: echo We are going to deploy to ${{ inputs.deploy-name }}
+    - run: echo We are going to deploy to '${{ inputs.deploy-name }}'
       shell: bash
     
     - run: echo "$(echo $RANDOM)"
       shell: bash
 
-    - run: echo "deployment=https://${{ inputs.deploy-name }}.tinkers.pl" >> $GITHUB_OUTPUT
+    - run: echo "deployment=https://${{ inputs.deploy-name }}-${{ $RANDOM }}.tinkers.pl" >> $GITHUB_OUTPUT
       id: deployname
       shell: bash
 
