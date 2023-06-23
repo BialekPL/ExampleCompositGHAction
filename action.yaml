@@ -1,4 +1,4 @@
-name: 'Hello Wolrd'
+name: 'Hello World'
 description: 'Deploy to given env'
 inputs:
   deploy-name:
@@ -6,8 +6,8 @@ inputs:
     required: true
     default: 'dev'
 outputs:
-  deployment-url:
-    description: "deployment url"
+  deploy-url:
+    description: "Deployment url"
     value: ${{ steps.deployname.outputs.deployment }}
 runs:
   using: "composite"
