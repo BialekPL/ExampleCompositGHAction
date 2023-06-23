@@ -18,7 +18,7 @@ runs:
     - run: echo "$(echo $RANDOM)"
       shell: bash
 
-    - run: echo "deployment=https://${{ inputs.deploy-name }}-${{ $RANDOM }}.tinkers.pl" >> $GITHUB_OUTPUT
+    - run: echo "deployment=https://${{ inputs.deploy-name }}-${RANDOM}.tinkers.pl" >> $GITHUB_OUTPUT
       id: deployname
       shell: bash
 
